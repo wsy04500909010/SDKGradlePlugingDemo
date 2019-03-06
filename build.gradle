@@ -5,9 +5,16 @@ buildscript {
     repositories {
         google()
         jcenter()
+
+        maven {//本地Maven仓库地址
+            url uri('./repo')
+        }
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.0'
+
+        //格式为-->group:module:version
+        classpath 'com.wsy.testgroovy:testplugin:1.0.0'
         
 
         // NOTE: Do not place your application dependencies here; they belong
