@@ -16,13 +16,13 @@ public class PluginImpl implements Plugin<Project>{
         System.out.println("========================");
 
         //使用Transform实行遍历
-//        def android = project.extensions.getByType(AppExtension)
-//        registerTransform(android)
+        def android = project.extensions.getByType(AppExtension)
+        registerTransform(android)
 
     }
 
-//    def static registerTransform(BaseExtension android) {
-//        AutoTransform transform = new AutoTransform()
-//        android.registerTransform(transform)
-//    }
+    def static registerTransform(BaseExtension android) {
+        MyTransform transform = new MyTransform()
+        android.registerTransform(transform)
+    }
 }
